@@ -178,8 +178,8 @@ body {
   opacity: 100%;
 }
 
-.pad-sponsor {
-  padding-bottom: 0px;
+.margin-spon {
+  margin-bottom: 0px;
 }
 
 .list-sponsor ul li :hover {
@@ -252,7 +252,7 @@ body {
     align-items: center;
     width: 100%;
   }
-  .pad-sponsor {
-    padding-bottom: 15px;
+  .margin-spon {
+    margin-bottom: 15px;
   }
 }
