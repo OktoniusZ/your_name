@@ -205,7 +205,7 @@ body {
 
 /* Start Introduction */
 .bg-introduction {
-  background-image: url(/img/bg-introduction.png);
+  background-image: url(img/bg-introduction.png);
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -306,7 +306,7 @@ body {
 }
 
 .story-img {
-  background-image: url(/img/story-img.png);
+  background-image: url(img/story-img.png);
   width: 50%;
   background-size: contain;
 
