@@ -3,12 +3,13 @@
 * {
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
+  list-style: none;
 }
 
 body {
   margin: 0;
   padding: 0;
-  height: 8000px;
+  height: 5000px;
 }
 
 /* Start Navigasi Bar */
@@ -29,6 +30,11 @@ body {
   font-weight: 500;
   cursor: pointer;
   font-weight: bold;
+}
+
+.brand-title:hover {
+  transition: all 0.5s;
+  opacity: 0.6;
 }
 
 .navbar-links {
@@ -54,8 +60,9 @@ body {
 }
 
 .navbar-links li a:hover {
-  color: rgba(10, 77, 159, 0.3);
+  color: rgba(10, 77, 159, 1);
   transition: all 0.5s;
+  font-weight: bold;
 }
 
 .hamburger {
@@ -163,23 +170,29 @@ body {
 /* End Landing Page */
 
 /* Start Sponsor Page */
-.list-sponsor ul li {
-  list-style: none;
+.sponsor {
+  width: 100%;
+}
+
+.list-sponsor {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
 }
 
 .list-sponsor ul {
-  position: relative;
-  top: 0vh;
-  right: 1.3vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-direction: row;
-  width: 100%;
   opacity: 100%;
+  width: 100%;
+  margin-top: -1rem;
 }
 
 .margin-spon {
-  margin-bottom: 0px;
+  width: 100%;
+  height: 15vh;
 }
 
 .list-sponsor ul li :hover {
@@ -189,6 +202,126 @@ body {
 }
 
 /* End Sponsor Page */
+
+/* Start Introduction */
+.bg-introduction {
+  background-image: url(/img/bg-introduction.png);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.caption-title {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 1);
+}
+
+.caption-desc {
+  display: flex;
+  font-size: 0.9rem;
+  line-height: 2rem;
+  width: 80%;
+  color: rgba(255, 255, 255, 1);
+}
+
+.caption-quote {
+  width: 80%;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: rgba(255, 255, 255, 1);
+}
+/* End Introduction */
+
+/* Start Trailer */
+.trailer-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+
+.trailer-link .active {
+  background-color: rgba(10, 77, 159, 1);
+}
+
+.trailer-link .active > .trailer-part {
+  color: white;
+}
+
+.trailer-link {
+  display: flex;
+  padding: 0 4rem;
+}
+
+.trailer {
+  padding: 0 1.5rem;
+  background-color: transparent;
+  border: 1px solid rgba(10, 77, 159, 1);
+  border-radius: 10px;
+  margin: 2rem 1rem 0;
+  cursor: pointer;
+}
+
+.trailer:hover,
+.trailer:hover,
+.trailer:hover {
+  transition: all 0.4s;
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+
+.trailer-part {
+  font-size: 1rem;
+  color: rgba(10, 77, 159, 1);
+}
+
+.trailer-title {
+  color: rgba(10, 77, 159, 1);
+  font-weight: bold;
+}
+/* End Trailer */
+
+/* Start Story */
+.story-section {
+  display: flex;
+  padding: 2rem 0;
+}
+
+.story-caption {
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  background-color: rgba(10, 77, 159, 1);
+  color: white;
+  padding: 1rem 1rem;
+}
+
+.story-img {
+  background-image: url(/img/story-img.png);
+  width: 50%;
+  background-size: contain;
+
+}
+
+.story-desc {
+  line-height: 1.5rem;
+}
+
+.story-img-text {
+  padding-top: 1rem;
+  width: 80%;
+  background-size: contain;
+}
+/* End Story */
 
 @media (max-width: 800px) {
   .navbar {
@@ -200,6 +333,10 @@ body {
   .hamburger {
     display: flex;
     margin-top: 30px;
+  }
+
+  .active .navbar-links ul li a {
+    font-weight: bold;
   }
 
   .navbar-links {
@@ -252,7 +389,48 @@ body {
     align-items: center;
     width: 100%;
   }
+
   .margin-spon {
     margin-bottom: 15px;
+  }
+
+  /* Introduction */
+  .bg-introduction {
+    height: 100%;
+  }
+
+  .caption-title {
+    font-size: 1.5rem;
+  }
+
+  .caption-desc {
+    font-size: 0.6rem;
+    line-height: 1.3rem;
+  }
+
+  .caption-quote {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  /* Start Trailer */
+  .trailer {
+    text-align: center;
+    margin: 2rem 0.6rem 0;
+  }
+
+  .video-trailer {
+    width: 25rem;
+    height: 25rem;
+  }
+  
+  /* Start Story */
+  .story-desc {
+    font-size: 0.7rem;
+    line-height: 1.3rem;
+  }
+
+  .story-img {
+    background-attachment: fixed;
   }
 }
