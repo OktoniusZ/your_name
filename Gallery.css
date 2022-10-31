@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* height: 8000px; */
+  animation: fadeInAnimation ease 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Start Navigasi Bar */
+
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: black;
+  margin: 0 2rem 0;
+}
+
+.brand-title {
+  font-size: 2rem;
+  color: rgba(10, 77, 159, 1);
+  font-weight: 500;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.navbar-links {
+  height: 100%;
+}
+
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  display: block;
+  text-decoration: none;
+  color: rgba(10, 77, 159, 1);
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+
+.navbar-links li a:hover {
+  color: rgba(10, 77, 159, 0.3);
+  transition: all 0.5s;
+}
+
+.hamburger {
+  position: absolute;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+/* End Navigasi Bar */
+
+/* Start Carousel */
+#slider {
+  overflow: hidden;
+}
+
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 20s slider infinite;
+}
+
+#slider figure img {
+  width: 20%;
+  float: left;
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+
+  20% {
+    left: 0;
+  }
+
+  25% {
+    left: -100%;
+  }
+
+  45% {
+    left: -100%;
+  }
+
+  50% {
+    left: -200%;
+  }
+
+  70% {
+    left: -200%;
+  }
+
+  75% {
+    left: -300%;
+  }
+
+  85% {
+    left: -300%;
+  }
+
+  100% {
+    left: -400%;
+  }
+}
+/* End Carousel */
+
+/* Start About */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem;
+}
+
+.about-desc {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.about-caption {
+  width: 50%;
+  text-align: justify;
+  line-height: 2.5rem;
+}
+
+.about-img {
+  width: 50%;
+}
+
+.about-title {
+  text-align: center;
+  color: rgba(10, 77, 159, 1);
+}
+/* End About */
+
+/* Start Card Section */
+.card-title  {
+  color: white;
+  padding-bottom: 1rem;
+  text-align: center;
+  z-index: 999;
+  transform: translateY(7rem);
+}
+
+.card-container > h1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.content > h2, .content > p {
+  font-family: 'Poppins', sans-serif;
+  color: black;
+}
+.card-container > h1 {
+  color: white;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(10, 77, 159, 1);
+}
+
+.card-section {
+  position: relative;
+  width: 1100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 8rem 0 0 4rem;
+}
+
+.card-section .card {
+  position: relative;
+  max-width: 300px;
+  height: 42vh;
+  background: white;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease-in-out;
+}
+
+.card-section .card:hover {
+  height: 75vh;
+}
+
+.card-section .card .imgBx {
+  position: relative;
+  width: 260px;
+  height: 260px; 
+  top: -60px;
+  left: 5px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgb(0, 0, 0,0.2);
+}
+
+.card-section .card .imgBx img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.card-section .card .content {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.card-section .card:hover .content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -55px;
+  transition-delay: 0.3s;
+}
+/* End Card Section */
+
+/* Start Gallery Section */
+.gallery-section {
+  padding-bottom: 10rem;
+  padding-top: 4rem;
+}
+
+.gallery-section h1 {
+  color: rgba(10, 77, 159, 1);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery img {
+  padding: 0.4rem;
+  filter: grayscale(100);
+  transition: 1s;
+}
+
+.gallery img:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.gallery-img {
+  width: 35vh;
+  height: 35vh;
+  background-size: cover;
+}
+/* End Gallery Section */
+
+/* Start Footer Seciton */
+.footer-section {
+  background-color: rgba(10, 77, 159, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+.footer-text {
+  width: 50%;
+  padding-bottom: 2rem;
+}
+
+.footer-text2 {
+  width: 80%;
+}
+/* End Footer Section */
+
+@media (max-width: 800px) {
+  /* Start Navbar */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0 1rem;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-top: 2.3rem;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links ul li {
+    text-align: center;
+  }
+
+  .navbar-links ul li a {
+    padding: 0.5rem 1rem;
+    transition: all 0.5s;
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(10, 77, 159, 1);
+  }
+
+  .navbar-links ul li a:hover {
+    color: rgba(10, 77, 159, 1);
+    font-weight: bold;
+    background-color: white;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+  /* End Navbar */
+
+  /* Start About */
+  .about-section {
+    padding: 3rem 0;
+  }
+
+  .about-desc {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .about-caption {
+    width: 90%;
+  }
+  .about-img {
+    height: 50vh;
+    width: 50vh;
+    background-attachment: fixed;
+  }
+  /* End About */
+
+
+  /* Start Footer Seciton */
+  .footer-section {
+    padding: 1rem;
+  }
+
+  .footer-text {
+    width: 80%;
+    padding-bottom: 2rem;
+  }
+
+  .footer-text2 {
+    width: 90%;
+  }
+  /* End Footer Section */
+}
